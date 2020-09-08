@@ -1,0 +1,50 @@
+.chat-main
+  .chat-main__group-info
+    .chat-main__group-info__left
+      .chat-main__group-info__left__test
+        test
+      .chat-main__group-info__left__member
+        Member:masa
+    .chat-main__group-info__right
+      = link_to "#", class: "chat-main__group-info__btn" do
+        Edit
+  .chat-main__message-list
+    .chat-main__message-list__name
+      .chat-main__message-list__name__left
+        masa 
+        //%span{"class"=>"day"} (#{"あああ"})
+      .chat-main__message-list__name__right
+        2019/11/20(Wed) 17:43:01
+    .chat-main__message-list__message
+      おはよう！
+    .chat-main__message-list__name2
+      .chat-main__message-list__name2__left
+        masa 
+        //%span{"class"=>"day"} (#{"あああ"})
+      .chat-main__message-list__name2__right
+        2019/11/20(Wed) 17:43:01
+    .chat-main__message-list__message2
+      おはよう！
+  .chat-main__message-form
+    %form.Form__contents
+      .Form__message
+        %input.Form__inputText{placeholder: "type a message", type: "text", style: "border:none"}
+        %label{class: "input-box__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class: "input-box__file"}
+      %input.Form__submitBtn{type: "submit", value: "Send"}
+
+-# = link_to "#", class: "chat-main__message-form__left__btn chat-main__message-form__left__btn--file" do
+        -#   = icon('far', 'file', class: "chat-main__message-form__left__btn--icon")
+        -#   %span<>
+
+-# .chat-main__message-form__left
+    -#   .chat-main__message-form__left__message
+    -#     type a message
+    -#   .chat-main__message-form__left__icon
+    -#     %label{class: "input-box__image"}
+    -#       = icon('fas', 'image')
+    -#       %input{type: "file", class: "input-box__file"}
+        
+    -# .chat-main__message-form__right
+    -#   Send
